@@ -60,7 +60,12 @@ Now, create a working directory for the project:
 
     cd visionexample
         
-Now, get an image to do the Vision analysis on. I used Guido van Rossum's Wiki picture. Use this command to add this to your directory:
+Now, get an image to do the Vision analysis on. I used Guido van Rossum's Wiki picture.
+
+![image](https://user-images.githubusercontent.com/58944210/147609070-15377240-0693-4bf0-9919-0d638dd1215a.png)
+
+
+Use this command to add this to your directory:
 
     wget https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Guido-portrait-2014-drc.jpg/220px-Guido-portrait-2014-drc.jpg
         
@@ -105,3 +110,4 @@ You should get this output or similar:
     Vision care 0.9137829542160034
     Beard 0.897161066532135
 
+We can see that the GCP Vision API was successfully able to label parts of the picture with a high certainty.
