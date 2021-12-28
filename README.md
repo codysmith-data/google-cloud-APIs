@@ -30,6 +30,8 @@ You will need to create an SSH key and add it to the VM instance as well. I used
   
 You will also need to make an Owner level Service Account and add it. There is Google documentation on how to do this.
 
+    https://cloud.google.com/vision/docs/before-you-begin
+
 Once in your VM:
 
 I used Python 3.6.9 for this project. This should already be a part of the Linux Ubuntu 18.04 OS.
@@ -44,4 +46,49 @@ Once you have pip3, get Google Cloud Vision (the first API we will use).
         pip3 install --upgrade google-cloud-vision
         
 ------------------------
-***CODE***
+***VISION API***
+
+Now, create a working directory for the project:
+
+        cd ~
+
+        mkdir gcloudpractice
+
+        cd gcloudpractice
+        
+        mkdir visionexample
+        
+        cd visionexample
+        
+Now, get an image to do the Vision analysis on. I used Guido van Rossum's Wiki picture. Use this command to add this to your directory:
+
+        wget https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Guido-portrait-2014-drc.jpg/220px-Guido-portrait-2014-drc.jpg
+        
+Now create your Python script:
+
+        nano visionexample.py
+
+Now paste this code into your Python file:
+
+        import io
+        from google.cloud import vision
+
+        # Instantiates a client
+        client = vision.ImageAnnotatorClient()
+
+        # The name of the image file to annotate
+        file_name = '220px-Guido-portrait-2014-drc.jpg'
+
+        # Loads the image into memory
+        with io.open(file_name, 'rb') as image_file:
+            content = image_file.read()
+
+        image = vision.Image(content=content)
+
+        # Performs label detection and scoring  on the image file
+        response = client.label_detection(image=image)
+        labels = response.label_annotations
+
+        for label in labels:
+            print(label.description, label.score)
+
