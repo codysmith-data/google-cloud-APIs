@@ -92,3 +92,16 @@ Now paste this code into your Python file:
     for label in labels:
         print(label.description, label.score)
 
+You should get this output or similar:
+
+    Forehead 0.9846563935279846
+    Glasses 0.9836904406547546
+    Nose 0.9835830330848694
+    Chin 0.9655716419219971
+    Hairstyle 0.9509009122848511
+    Eyebrow 0.9483392834663391
+    Eye 0.935302734375
+    Mouth 0.9233428835868835
+    Vision care 0.9137829542160034
+    Beard 0.897161066532135
+
