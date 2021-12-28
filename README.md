@@ -29,3 +29,19 @@ You will need to create an SSH key and add it to the VM instance as well. I used
     https://www.putty.org/
   
 You will also need to make an Owner level Service Account and add it. There is Google documentation on how to do this.
+
+Once in your VM:
+
+I used Python 3.6.9 for this project. This should already be a part of the Linux Ubuntu 18.04 OS.
+
+Although, you will need pip3 for installing the Google Cloud packages. Do the dollowing commands:
+
+        sudo apt update
+        sudo apt install python3-pip
+        
+Once you have pip3, get Google Cloud Vision (the first API we will use).
+
+        pip3 install --upgrade google-cloud-vision
+        
+------------------------
+***CODE***
