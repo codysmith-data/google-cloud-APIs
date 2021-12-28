@@ -31,6 +31,8 @@ You will need to create an SSH key and add it to the VM instance as well. I used
 You will also need to make an Owner level Service Account and add it. There is Google documentation on how to do this.
 
     https://cloud.google.com/vision/docs/before-you-begin
+    
+**Before using each API, you will need to activate them within the Google Cloud Platform**
 
 Once in your VM:
 
@@ -44,8 +46,6 @@ Although, you will need pip3 for installing the Google Cloud packages. Do the do
 Once you have pip3, get Google Cloud Vision (the first API we will use).
 
     pip3 install --upgrade google-cloud-vision
-    
-**Before using each API, you will need to activate them within the Google Cloud Platform**
         
 ------------------------
 ***VISION API***
