@@ -44,6 +44,8 @@ Although, you will need pip3 for installing the Google Cloud packages. Do the do
 Once you have pip3, get Google Cloud Vision (the first API we will use).
 
     pip3 install --upgrade google-cloud-vision
+    
+**Before using each API, you will need to activate them within the Google Cloud Platform**
         
 ------------------------
 ***VISION API***
