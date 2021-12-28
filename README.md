@@ -72,6 +72,10 @@ Use this command to add this to your directory:
 Now create your Python script:
 
     nano visionexample.py
+    
+Now exit & save this file, and use this command to run it:
+
+    python3 visionexample.py
 
 Now paste this code into your Python file:
 
