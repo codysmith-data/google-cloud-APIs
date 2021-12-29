@@ -9,7 +9,9 @@ https://www.linkedin.com/in/codysmithprofile/
 ------------------------
 ***OVERVIEW***
 
-This is a walkthrough of how to access some of the APIs through Google Cloud and how to use them with Python.
+This is a walkthrough of how to access some of the APIs that would be useful for data analysis through Google Cloud and how to use them with Python.
+
+The API's used in this example are Vision, Natural Language, and Translate.
 
 _Disclaimer: this is mainly an example of how to use the APIs via the Google Cloud platform. The Python code in this project is simple, and just meant to show basics within the GCP._
 
@@ -119,7 +121,7 @@ You should get this output or similar:
 We can see that the GCP Vision API was successfully able to label parts of the picture with a high certainty.
 
 ------------------------
-***LANGUAGE API***
+***NATURAL LANGUAGE API***
 
 Start again by making the necessary directory:
         
@@ -144,20 +146,20 @@ Now paste this code into your Python file:
     #Creating function to do sentiment and entity analysis
     def lang_analysis(text):
 
-            #Creating instance of language client
-            client = language_v1.LanguageServiceClient()
+        #Creating instance of language client
+        client = language_v1.LanguageServiceClient()
 
-            #Reading in text
-            document = language_v1.Document(content=text, type_=language_v1.Document.Type.PLAIN_TEXT, language='en')
+        #Reading in text
+        document = language_v1.Document(content=text, type_=language_v1.Document.Type.PLAIN_TEXT, language='en')
 
-            #Performing sentiment analysis
-            sentiment = client.analyze_sentiment(request = {"document": document}).document_sentiment
+        #Performing sentiment analysis
+        sentiment = client.analyze_sentiment(request = {"document": document}).document_sentiment
 
-            #Performing entity analysis
-            entities = client.analyze_entities(request = {'document': document, 'encoding_type': language_v1.EncodingType.UTF8})
+        #Performing entity analysis
+        entities = client.analyze_entities(request = {'document': document, 'encoding_type': language_v1.EncodingType.UTF8})
 
-            #Returning sentitment and entity analysis
-            return sentiment, entities
+        #Returning sentitment and entity analysis
+        return sentiment, entities
 
     #Creating example text
     example = "Google LLC is an American multinational technology company that specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware. It is considered one of the Big Five companies in the American information technology industry, along with Amazon, Apple, Meta (Facebook) and Microsoft. Google was founded on September 4, 1998, by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in California. Together they own about 14% of its publicly-listed shares and control 56% of the stockholder voting power through super-voting stock. The company went public via an initial public offering (IPO) in 2004. In 2015, Google was reorganized as a wholly-owned subsidiary of Alphabet Inc.. Google is Alphabet's largest subsidiary and is a holding company for Alphabet's Internet properties and interests. Sundar Pichai was appointed CEO of Google on October 24, 2015, replacing Larry Page, who became the CEO of Alphabet. On December 3, 2019, Pichai also became the CEO of Alphabet. In 2021, the Alphabet Workers Union was founded, mainly composed of Google employees."
@@ -171,7 +173,7 @@ Now paste this code into your Python file:
 
     #Printing entity analysis
     for e in entities.entities:
-            print(e.name, language_v1.Entity.Type(e.type_).name, e.metadata, e.salience)
+        print(e.name, language_v1.Entity.Type(e.type_).name, e.metadata, e.salience)
 
 I used the first few blocks from Google's Wikipedia page as the example text.
 
@@ -264,3 +266,62 @@ In this case, the same wiki entry for Google this text is from was included for 
 
 The last part is the entity salience. This describes the importance of its respective entity as compared to all other entities.
 In this case, Google LLC has the highest salience. This makes sense as this is the wiki page for Google itself.
+
+------------------------
+***TRANSLATE API***
+
+Start again by making the necessary directory:
+        
+    cd ../
+
+    mkdir tranexample
+    
+    cd tranexample
+    
+Now, pip install the Translate API:
+
+    pip3 install --upgrade google-cloud-translate
+    
+Once installation is complete, create the Python file:
+
+    nano tranexample.py
+    
+Now paste this code into your Python file:
+
+    # -*- coding: utf-8 -*-
+
+    from google.cloud import translate_v2 as translate
+
+    #Creating function to translate text to English
+    def translate_text(text, target='en'):
+
+            #Creating instance of translate client
+            client = translate.Client()
+
+            #Translating
+            result = client.translate(text, target_language=target)
+
+            #Printing results
+            print('Text:', result['input'])
+            print('Translation:', result['translatedText'])
+            print('Detected source lang:', result['detectedSourceLanguage'])
+
+    #Example text to translate
+    example_text = 'Me gustaria una cerveza.'
+
+    #Using translating function
+    translate_text(example_text)
+
+The example text is a Spanish example that I found online.
+
+Now, save and close out of the file, and run it by using:
+   
+    python3 tranexample.py
+    
+And you should get the following output or similar:
+
+    Text: Me gustaria una cerveza.
+    Translation: I would like a beer.
+    Detected source lang: es
+
+It has output the original text, the English translation, and the orignal language.
