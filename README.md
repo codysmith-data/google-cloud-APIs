@@ -1,4 +1,4 @@
-# google-cloud-APIs
+# google-cloud-API-examples
 
 @author: Cody Smith | codysmith.contact@gmail.com
 
