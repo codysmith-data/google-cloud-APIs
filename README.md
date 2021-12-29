@@ -244,3 +244,9 @@ And you should get the following output or similar:
     14 NUMBER {'value': '14'} 0.0
     2015 NUMBER {'value': '2015'} 0.0
     56 NUMBER {'value': '56'} 0.0
+
+The first line has 2 numbers, the first desribes the sentiment (on a scale of -1.0 to 1.0 (neg to pos)).
+The second describes the magnitude of the sentiment (0.0 to infinity), which shows the amount of emotional language present in the text.
+Since the first number in this 0.0, the overall sentiment of this text is neutral.
+And the low magnitude of 1.0 shows that there is little emotional text, which shows that the text is truly neutral (and not mixed negative and positive).
+This makes sense as it is a Wikipedia article.
