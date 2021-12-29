@@ -172,3 +172,11 @@ Now paste this code into your Python file:
     #Printing entity analysis
     for e in entities.entities:
             print(e.name, language_v1.Entity.Type(e.type_).name, e.metadata, e.salience)
+
+I used the first few blocks from Google's Wikipedia page as the example text.
+
+Now, save and close out of the file, and run it by using:
+   
+    python3 langexample.py
+    
+And you should get the following output or similar:
