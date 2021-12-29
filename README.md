@@ -180,3 +180,67 @@ Now, save and close out of the file, and run it by using:
     python3 langexample.py
     
 And you should get the following output or similar:
+
+    0.0 1.0
+
+    Google LLC ORGANIZATION {'mid': '/m/045c7b', 'wikipedia_url': 'https://en.wikipedia.org/wiki/Google'} 0.666184663772583
+    services OTHER {} 0.07219050824642181
+    advertising technologies OTHER {} 0.0317310094833374
+    products CONSUMER_GOOD {} 0.025574326515197754
+    search engine CONSUMER_GOOD {} 0.025574326515197754
+    American LOCATION {'wikipedia_url': 'https://en.wikipedia.org/wiki/United_States', 'mid': '/m/09c7w0'} 0.02259480208158493
+    Larry Page PERSON {'mid': '/m/0gjpq', 'wikipedia_url': 'https://en.wikipedia.org/wiki/Larry_Page'} 0.02208172157406807
+    cloud computing OTHER {} 0.013903314247727394
+    hardware OTHER {} 0.009819552302360535
+    software CONSUMER_GOOD {} 0.009819552302360535
+    CEO PERSON {} 0.009275099262595177
+    companies ORGANIZATION {} 0.006712904199957848
+    company ORGANIZATION {} 0.005592409987002611
+    students PERSON {} 0.005502747837454081
+    information technology industry OTHER {} 0.004731095861643553
+    one PERSON {} 0.004731095861643553
+    14% OTHER {} 0.0036498780827969313
+    56% OTHER {} 0.0036498780827969313
+    stock OTHER {} 0.003349350532516837
+    shares OTHER {} 0.0032068095169961452
+    stockholder voting power OTHER {} 0.0029426568653434515
+    initial public offering EVENT {} 0.0029346030205488205
+    IPO EVENT {} 0.0029346030205488205
+    Amazon ORGANIZATION {} 0.0028000709135085344
+    Big Five ORGANIZATION {} 0.0028000709135085344
+    CEO PERSON {} 0.0019189842278137803
+    California LOCATION {'mid': '/m/01n7q', 'wikipedia_url': 'https://en.wikipedia.org/wiki/California'} 0.0019034752622246742
+    Ph.D. PERSON {'wikipedia_url': 'https://en.wikipedia.org/wiki/Doctor_of_Philosophy', 'mid': '/m/04zx3q1'} 0.0019034752622246742
+    Stanford University ORGANIZATION {'wikipedia_url': 'https://en.wikipedia.org/wiki/Stanford_University', 'mid': '/m/06pwq'} 0.0019034752622246742
+    Apple ORGANIZATION {'mid': '/m/0k8z', 'wikipedia_url': 'https://en.wikipedia.org/wiki/Apple_Inc.'} 0.0018896120600402355
+    Meta ORGANIZATION {'wikipedia_url': 'https://en.wikipedia.org/wiki/Meta_Platforms', 'mid': '/m/0hmyfsv'} 0.0018896120600402355
+    Facebook OTHER {'mid': '/m/02y1vz', 'wikipedia_url': 'https://en.wikipedia.org/wiki/Facebook'} 0.0018896120600402355
+    Microsoft ORGANIZATION {'mid': '/m/04sv4', 'wikipedia_url': 'https://en.wikipedia.org/wiki/Microsoft'} 0.0018896120600402355
+    Sergey Brin PERSON {'mid': '/m/0gjq6', 'wikipedia_url': 'https://en.wikipedia.org/wiki/Sergey_Brin'} 0.0018802153645083308
+    holding company ORGANIZATION {} 0.0017562595894560218
+    employees PERSON {} 0.0015355442883446813
+    Sundar Pichai PERSON {'wikipedia_url': 'https://en.wikipedia.org/wiki/Sundar_Pichai', 'mid': '/m/09gds74'} 0.0013073571026325226
+    interests OTHER {} 0.0012062456225976348
+    subsidiary ORGANIZATION {} 0.0011022778926417232
+    Internet properties OTHER {} 0.0009663362870924175
+    Alphabet Workers Union ORGANIZATION {'wikipedia_url': 'https://en.wikipedia.org/wiki/Alphabet_Workers_Union', 'mid': '/g/11llzkc_kl'} 0.0009076223359443247
+    Alphabet Inc... ORGANIZATION {'mid': '/g/11bwcf511s', 'wikipedia_url': 'https://en.wikipedia.org/wiki/Alphabet_Inc.'} 0.0005721302004531026
+    September 4, 1998 DATE {'day': '4', 'year': '1998', 'month': '9'} 0.0
+    2004 DATE {'year': '2004'} 0.0
+    2015 DATE {'year': '2015'} 0.0
+    October 24, 2015 DATE {'month': '10', 'year': '2015', 'day': '24'} 0.0
+    December 3, 2019 DATE {'year': '2019', 'month': '12', 'day': '3'} 0.0
+    2021 DATE {'year': '2021'} 0.0
+    3 NUMBER {'value': '3'} 0.0
+    24 NUMBER {'value': '24'} 0.0
+    4 NUMBER {'value': '4'} 0.0
+    2004 NUMBER {'value': '2004'} 0.0
+    2015 NUMBER {'value': '2015'} 0.0
+    2021 NUMBER {'value': '2021'} 0.0
+    1998 NUMBER {'value': '1998'} 0.0
+    one NUMBER {'value': '1'} 0.0
+    2019 NUMBER {'value': '2019'} 0.0
+    Five NUMBER {'value': '5'} 0.0
+    14 NUMBER {'value': '14'} 0.0
+    2015 NUMBER {'value': '2015'} 0.0
+    56 NUMBER {'value': '56'} 0.0
