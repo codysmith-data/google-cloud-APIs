@@ -246,7 +246,21 @@ And you should get the following output or similar:
     56 NUMBER {'value': '56'} 0.0
 
 The first line has 2 numbers, the first desribes the sentiment (on a scale of -1.0 to 1.0 (neg to pos)).
+
 The second describes the magnitude of the sentiment (0.0 to infinity), which shows the amount of emotional language present in the text.
 Since the first number in this 0.0, the overall sentiment of this text is neutral.
+
 And the low magnitude of 1.0 shows that there is little emotional text, which shows that the text is truly neutral (and not mixed negative and positive).
 This makes sense as it is a Wikipedia article.
+
+The group of data below the sentiment analysis is the entity analysis.
+
+The first part of the data is the entity that is being described. At the top of the list, it is "Google LLC".
+
+The second part is the entity type. For Google, this is "ORGANIZATION".
+
+The third part (in brackets) is the metadata for the entity. The wiki entry will be included (if available).
+In this case, the same wiki entry for Google this text is from was included for Google LLC.
+
+The last part is the entity salience. This describes the importance of its respective entity as compared to all other entities.
+In this case, Google LLC has the highest salience. This makes sense as this is the wiki page for Google itself.
